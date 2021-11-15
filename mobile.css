@@ -39,7 +39,7 @@ html body {
     font-weight: 400;
     background-color: var(--body-bg-color);
     color: var(--font-color);
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
 
