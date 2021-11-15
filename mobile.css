@@ -32,6 +32,8 @@
     --btn-border-radius: 20px;
     /* FONT-SIZE */
     --modal-font-size: 1.125rem;
+    /* PADDING */
+    --player-section-clamp-padding: clamp(8px, 10%, 80px);
 }
 
 body {
@@ -82,28 +84,18 @@ button:active {
     border: var(--border-color-2) 4px inset;
 }
 
-.current {
-    padding: 10%;
-    background-color: var(--current-bg-color);
-    border-radius: var(--section-border-radius);
-    font-weight: inherit;
-}
-.current-label {
-    font-size: 1.8rem;
-}
-
-.score {
-    font-size: 2rem;
-}
-
 .player {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     text-align: center;
     border-radius: var(--section-border-radius);
     border: var(--border-color-1) 5px inset;
-    padding: 10%;
+    padding: var(--player-section-clamp-padding);
     height: 98%;
     width: 98%;
     background: var(--player-bg-color);
+    /* overflow: hidden; */
 }
 .player--0 {
     grid-area: 1 / 1 / span 2 / span 1;
@@ -117,6 +109,20 @@ button:active {
 }
 .player--winner {
     background: var(--player-winner-bg-color);
+}
+
+.current {
+    padding: var(--player-section-clamp-padding);
+    background-color: var(--current-bg-color);
+    border-radius: var(--section-border-radius);
+    font-weight: inherit;
+}
+.current-label {
+    font-size: 1.8rem;
+}
+
+.score {
+    font-size: 2rem;
 }
 
 .btn--new {
@@ -155,7 +161,7 @@ button:active {
     padding: 0.5rem 0.35rem;
     border-radius: var(--section-border-radius);
     z-index: 10;
-    overflow: scroll;
+    overflow: auto;
 }
 .modal h2 {
     font-weight: 700;
@@ -169,15 +175,13 @@ button:active {
     height: auto;
     width: auto;
     font-weight: 700;
-    margin-left: 75%;
+    float: right;
 }
 
 .overlay {
     z-index: 5;
     position: absolute;
     background: var(--overlay-bg);
-    top: 0;
-    /* bottom: -50px; */
     width: 100%;
     height: 100%;
     grid-area: 1 / 1 / span 5 / span 2;
