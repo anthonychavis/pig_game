@@ -56,6 +56,8 @@ const switchPlayer = () => {
 
 // #ACTION!!!
 btnNew.addEventListener('click', function () {
+    current1El.classList.remove('hidden');
+    current2El.classList.add('hidden');
     init();
 });
 
@@ -96,6 +98,7 @@ btnHold.addEventListener('click', function () {
     }
 });
 
+// RULES
 btnRules.addEventListener('click', function () {
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
