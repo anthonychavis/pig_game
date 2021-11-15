@@ -34,11 +34,13 @@
     --modal-font-size: 1.125rem;
 }
 
-body {
+html body {
     font-size: 1.25rem;
     font-weight: 400;
     background-color: var(--body-bg-color);
     color: var(--font-color);
+    height: 100%;
+    width: 100%;
 }
 
 main {
@@ -176,7 +178,6 @@ button:active {
     position: absolute;
     background: var(--overlay-bg);
     top: 0;
-    bottom: 0;
     height: 100%;
     width: 100%;
 }
