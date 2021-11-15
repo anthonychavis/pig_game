@@ -50,6 +50,8 @@ const switchPlayer = () => {
     activePlayer = activePlayer === 0 ? 1 : 0;
     player1El.classList.toggle('player--active');
     player2El.classList.toggle('player--active');
+    current1El.classList.toggle('hidden');
+    current2El.classList.toggle('hidden');
 };
 
 // #ACTION!!!

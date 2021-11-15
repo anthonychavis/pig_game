@@ -159,6 +159,7 @@ button:active {
 .modal h2 {
     font-weight: 700;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 .modal button {
     position: sticky;
