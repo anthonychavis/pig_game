@@ -1,64 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pig Game</title>
-    <link rel="stylesheet" href="mobile.css" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pig Game</title>
+        <link rel="stylesheet" href="mobile.css" />
+        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <meta name="author" content="Anthony Chavis" />
+        <meta
+            name="description"
+            content="To Score 100 First, Know When to Hold'em" />
+        <meta property="og: title" content="Pig Game" />
+        <meta
+            property="og:url"
+            content="https://anthonychavis.github.io/pig_game/" />
+        <!-- <meta property="og:image" content=""> -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:description"
+            content="To Score 100 First, Know When to Hold'em" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="twitter:title" content="Pig Game" />
+        <meta property="twitter:description" content="Discover hidden places" />
+        <!-- <meta property="twitter:image" content=""> -->
+        <meta property="twitter:card" content="summary_large_image" />
+    </head>
 
-    <meta
-      name="description"
-      content="To Score 100 First, Know When to Hold'em"
-    />
-    <meta property="og: title" content="Pig Game" />
-    <meta
-      property="og:url"
-      content="https://anthonychavis.github.io/pig_game/"
-    />
-    <!-- <meta property="og:image" content=""> -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:description"
-      content="To Score 100 First, Know When to Hold'em"
-    />
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="twitter:title" content="Pig Game" />
-    <meta property="twitter:description" content="Discover hidden places" />
-    <!-- <meta property="twitter:image" content=""> -->
-    <meta property="twitter:card" content="summary_large_image" />
-  </head>
+    <body>
+        <main>
+            <section class="player player--0 player--active">
+                <h2 class="name" id="name--0">Player 1</h2>
+                <p class="score" id="score--0">24</p>
+                <div class="current">
+                    <p class="current-label">Current</p>
+                    <p class="current-score" id="current--0">0</p>
+                </div>
+            </section>
 
-  <body>
-    <main>
-      <section class="player player--0 player--active">
-        <h2 class="name" id="name--0">Player 1</h2>
-        <p class="score" id="score--0">24</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current--0">0</p>
-        </div>
-      </section>
+            <section class="player player--1">
+                <h2 class="name" id="name--1">Player 2</h2>
+                <p class="score" id="score--1">42</p>
+                <div class="current">
+                    <p class="current-label">Current</p>
+                    <p class="current-score" id="current--1">0</p>
+                </div>
+            </section>
 
-      <section class="player player--1">
-        <h2 class="name" id="name--1">Player 2</h2>
-        <p class="score" id="score--1">42</p>
-        <div class="current">
-          <p class="current-label">Current</p>
-          <p class="current-score" id="current--1">0</p>
-        </div>
-      </section>
+            <img src="dice-5.png" alt="Playing dice" class="dice" />
+            <button class="btn btn--new">↩️<br />New Game</button>
+            <button class="btn btn--roll">🎲<br />Roll Die</button>
+            <button class="btn btn--hold">📥<br />Hold</button>
+            <button class="btn btn--rules">📙<br />Rules</button>
+        </main>
 
-      <img src="dice-5.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new">↩️<br />New Game</button>
-      <button class="btn btn--roll">🎲<br />Roll Die</button>
-      <button class="btn btn--hold">📥<br />Hold</button>
-      <button class="btn btn--rules">📙<br />Rules</button>
-    </main>
+        <section class="hidden modal">
+            <button id="close-modal">&times;</button>
+            <h2>Rules</h2>
+            <p>
+                <strong>Objective:</strong> Be the first player to score 100!
+                <br />• To start the game, player 1 pushes the Roll Die button.
+                <br />• If the die is not 1, the value is added to the player's
+                Current Score. If the value is 1, any value in the Current Score
+                is lost and it becomes the next player's turn. <br />• When the
+                Hold button is used, the value of the Current Score is moved to
+                the player's main score. It is then the next player's turn to
+                roll the die. <br />• Once the value of a player's main score is
+                at least 100, that player is the winner of the game! 🎉
+            </p>
+        </section>
 
-    <script src="script.js"></script>
-  </body>
+        <div class="hidden overlay"></div>
+
+        <script src="script.js"></script>
+    </body>
 </html>
