@@ -176,6 +176,7 @@ button:active {
     position: absolute;
     background: var(--overlay-bg);
     top: 0;
-    height: 100vh;
+    bottom: 0;
+    height: 100%;
     width: 100%;
 }
