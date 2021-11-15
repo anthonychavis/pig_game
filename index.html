@@ -58,26 +58,26 @@
             <button class="btn btn--roll">🎲<br />Roll Die</button>
             <button class="btn btn--hold">📥<br />Hold</button>
             <button class="btn btn--rules">📙<br />Rules</button>
+
+            <section class="hidden modal">
+                <button id="close-modal">&times;</button>
+                <h2>Rules</h2>
+                <p>
+                    <strong>Objective:</strong> Be the first player to score
+                    100! <br />• To start the game, player 1 pushes the Roll Die
+                    button. <br />• If the die is not 1, the value is added to
+                    the player's Current Score. If the value is 1, any value in
+                    the Current Score is lost and it becomes the next player's
+                    turn. <br />• When the Hold button is used, the value of the
+                    Current Score is moved to the player's main score. It is
+                    then the next player's turn to roll the die. <br />• Once
+                    the value of a player's main score is at least 100, that
+                    player is the winner of the game! 🎉
+                </p>
+            </section>
+
+            <div class="hidden overlay"></div>
         </main>
-
-        <section class="hidden modal">
-            <button id="close-modal">&times;</button>
-            <h2>Rules</h2>
-            <p>
-                <strong>Objective:</strong> Be the first player to score 100!
-                <br />• To start the game, player 1 pushes the Roll Die button.
-                <br />• If the die is not 1, the value is added to the player's
-                Current Score. If the value is 1, any value in the Current Score
-                is lost and it becomes the next player's turn. <br />• When the
-                Hold button is used, the value of the Current Score is moved to
-                the player's main score. It is then the next player's turn to
-                roll the die. <br />• Once the value of a player's main score is
-                at least 100, that player is the winner of the game! 🎉
-            </p>
-        </section>
-
-        <div class="hidden overlay"></div>
-
         <script src="script.js"></script>
     </body>
 </html>

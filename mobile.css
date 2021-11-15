@@ -149,6 +149,7 @@ button:active {
     transform: translate(-50%, -50%);
     width: 85%;
     max-height: 85vh;
+    grid-area: 1 / 1 / span 5 / span 2;
 
     background-color: var(--body-bg-color);
     padding: 0.5rem 0.35rem;
@@ -176,6 +177,8 @@ button:active {
     position: absolute;
     background: var(--overlay-bg);
     top: 0;
-    bottom: -50px;
+    /* bottom: -50px; */
     width: 100%;
+    height: 100%;
+    grid-area: 1 / 1 / span 5 / span 2;
 }
