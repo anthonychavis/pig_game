@@ -39,6 +39,7 @@
     --current-lbl-font-size: 1.8rem;
     --current-score-size: 1.5rem;
     --btn-font-size: 1.125rem;
+    --emoji-size: 1.9rem;
 
     /* PADDING */
     --player-section-clamp-padding: clamp(8px, 10%, 80px);
@@ -84,9 +85,13 @@ button {
     border-radius: var(--btn-border-radius);
     border: var(--border-color-1) 5px outset;
     transition: all 0.1s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
 button::first-letter {
-    font-size: 1.8rem;
+    font-size: var(--emoji-size);
 }
 button:active {
     border: var(--border-color-2) 4px inset;
@@ -98,7 +103,7 @@ button:active {
     justify-content: center;
     text-align: center;
     border-radius: var(--section-border-radius);
-    border: var(--border-color-1) 5px inset;
+    border: var(--border-color-2) 2px inset;
     padding: var(--player-section-clamp-padding);
     height: 98%;
     width: 98%;
@@ -108,9 +113,11 @@ button:active {
 .player--active {
     font-weight: 700;
     background: var(--player-active-bg-color);
+    border: var(--border-color-1) 5px outset;
 }
 .player--winner {
     background: var(--player-winner-bg-color);
+    border: var(--border-color-1) 5px outset;
 }
 
 .score {
@@ -183,7 +190,7 @@ button:active {
 .modal button {
     position: sticky;
     top: 0;
-    padding: 0.15rem 0.75rem;
+    padding: 0.15rem 0.55rem;
     height: auto;
     width: auto;
     font-weight: 700;
