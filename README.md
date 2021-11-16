@@ -1,17 +1,15 @@
-# pig_game
-
 # Pig Game
 
 2 player, button-based game
 
 ## Table of Contents
 
--   [Introduction](#general-info)
+-   [Introduction](#introduction)
 -   [Technologies](#technologies)
 -   [Launch](#launch)
 -   [Illustration](#Illustration)
 -   [Sources](#sources)
--   [Contact](#contact)
+-   [Contact Me](#contact_me)
 
 ## Introduction
 
