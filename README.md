@@ -15,6 +15,7 @@
 
 The goal of the project was primarily to practice javascript functionality.
 Additionally, I wanted to practice CSS Grid layout and utilizing CSS Variables.
+From creating my own layout and selecting the colors to adding in a modal window to explain how the game is played, I actually had a lot of fun building this project!
 
 ## Technologies
 
