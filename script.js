@@ -65,7 +65,7 @@ btnRoll.addEventListener('click', function () {
     if (playing) {
         let ranNum = Math.trunc(Math.random() * 6) + 1;
         diceEl.classList.remove('hidden');
-        diceEl.src = `dice-${ranNum}.png`;
+        diceEl.src = `images/dice-${ranNum}.png`;
         if (ranNum !== 1) {
             currentScore += ranNum;
             document.getElementById(`current--${activePlayer}`).textContent =

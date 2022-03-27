@@ -7,8 +7,11 @@
         <title>Pig Game</title>
         <link rel="stylesheet" href="mobile.css" />
         <!-- <link rel="stylesheet" href="style.css" /> -->
-        <link rel="stylesheet" href="favicon_AC2.png" type="image/x-icon" />
-        <link rel="icon" href="favicon_AC2.png" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="images/favicon_AC2.png"
+            type="image/x-icon" />
+        <link rel="icon" href="images/favicon_AC2.png" type="image/x-icon" />
         <meta name="author" content="Anthony Chavis" />
         <meta
             name="description"
@@ -39,6 +42,7 @@
 
     <body>
         <main>
+            <!-- First Player -->
             <section class="player player--0 player--active">
                 <h2 class="name" id="name--0">Player 1</h2>
                 <p class="score" id="score--0">24</p>
@@ -48,6 +52,7 @@
                 </div>
             </section>
 
+            <!-- Second Player -->
             <section class="player player--1">
                 <h2 class="name" id="name--1">Player 2</h2>
                 <p class="score" id="score--1">42</p>
@@ -57,12 +62,16 @@
                 </div>
             </section>
 
-            <img src="dice-5.png" alt="Playing dice" class="dice" />
+            <!-- Dice Img -->
+            <img src="images/dice-5.png" alt="Playing dice" class="dice" />
+
+            <!-- Buttons -->
             <button class="btn btn--new">↩️<br /><span>New Game</span></button>
             <button class="btn btn--roll">🎲<br /><span>Roll Die</span></button>
             <button class="btn btn--hold">📥<br /><span>Hold</span></button>
             <button class="btn btn--rules">📙<br /><span>Rules</span></button>
 
+            <!-- Rules Modal -->
             <section class="hidden modal">
                 <button id="close-modal">&times;</button>
                 <h2>Rules</h2>
@@ -80,8 +89,9 @@
                     Current Score. <br /><br />
 
                     • The Hold button is used to move the value of the Current
-                    Score to the player's main score. • When the Hold button is
-                    used, the value of the Current Score is moved to the
+                    Score to the player's main score (located under the title of
+                    Player 1 or Player 2, respectively). • When the Hold button
+                    is used, the value of the Current Score is moved to the
                     player's main score. • It is then the next player's turn to
                     roll the die. <br /><br />
 
