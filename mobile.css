@@ -108,12 +108,13 @@ button:active {
     height: 98%;
     width: 98%;
     background: var(--player-bg-color);
-    /* overflow: hidden; */
+    opacity: 0.5;
 }
 .player--active {
     font-weight: 700;
     background: var(--player-active-bg-color);
-    border: var(--border-color-1) 5px outset;
+    border: var(--border-color-1) 15px outset;
+    opacity: 1;
 }
 .player--winner {
     background: var(--player-winner-bg-color);
