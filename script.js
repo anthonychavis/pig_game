@@ -52,6 +52,12 @@ const switchPlayer = () => {
     player2El.classList.toggle('player--active');
     current1El.classList.toggle('hidden');
     current2El.classList.toggle('hidden');
+
+    // inhibit playerX from taking playerY's turn
+    btnRoll.removeEventListener('click', rollFxn);
+    setTimeout(() => {
+        roll();
+    }, 900);
 };
 
 // #ACTION!!!
@@ -61,7 +67,10 @@ btnNew.addEventListener('click', function () {
     init();
 });
 
-btnRoll.addEventListener('click', function () {
+const roll = () => btnRoll.addEventListener('click', rollFxn);
+roll();
+
+function rollFxn() {
     if (playing) {
         let ranNum = Math.trunc(Math.random() * 6) + 1;
         diceEl.classList.remove('hidden');
@@ -74,9 +83,12 @@ btnRoll.addEventListener('click', function () {
             switchPlayer();
         }
     }
-});
+}
 
-btnHold.addEventListener('click', function () {
+const hold = () => btnHold.addEventListener('click', holdFxn);
+hold();
+
+function holdFxn() {
     if (playing) {
         // Add current score to active player's score
         scores[activePlayer] += currentScore;
@@ -94,11 +106,17 @@ btnHold.addEventListener('click', function () {
             diceEl.classList.add('hidden');
         } else {
             switchPlayer();
+            // inhibit playerX from activating the hold btn a 2nd time to skip playerY's turn
+            btnHold.removeEventListener('click', holdFxn);
+            setTimeout(() => {
+                hold();
+            }, 1000);
         }
     }
-});
+}
 
 // RULES
+// add open on pg load
 btnRules.addEventListener('click', function () {
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
@@ -117,3 +135,5 @@ document.addEventListener('keyup', function (esc) {
         closeModal();
     }
 });
+
+// (look into using Classes for this app in free time)
