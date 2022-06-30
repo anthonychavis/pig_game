@@ -15,7 +15,9 @@
 
 The goal of the project was primarily to practice javascript functionality.
 Additionally, I wanted to practice CSS Grid layout and utilizing CSS Variables.
-From creating my own layout and selecting the colors to adding in a modal window to explain how the game is played, I actually had a lot of fun building this project!
+From creating my layout and selecting the colors, to adding in a modal window to explain how the game is played, I had a lot of fun building this project!
+
+Although I completed this project and made it my own, a while ago, I continue to work on it as I think of different ideas and get feedback from new users. Recently I made changes to enhance the visual cue of the change in players' turns. Additionally, I added a delay in button functionality for the "hold" & "roll" buttons to inhibit a player from accidentally using the next player's turn.
 
 ## Technologies
 
