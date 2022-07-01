@@ -119,6 +119,7 @@ button:active {
 .player--winner {
     background: var(--player-winner-bg-color);
     border: var(--border-color-1) 5px outset;
+    opacity: 1;
 }
 
 .score {
