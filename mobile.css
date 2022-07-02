@@ -175,10 +175,10 @@ button:active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 85%;
-    max-height: 85vh;
+    max-block-size: 85vh;
+    inline-size: min(65ch, 80vw);
     background-color: var(--body-bg-color);
-    padding: 0.5rem 0.35rem;
+    padding: 0.5rem;
     border-radius: var(--section-border-radius);
     z-index: 10;
     overflow: auto;
