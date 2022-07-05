@@ -117,10 +117,14 @@ function holdFxn() {
 
 // RULES
 // add open on pg load
-btnRules.addEventListener('click', function () {
+window.addEventListener('load', showRules);
+
+btnRules.addEventListener('click', showRules);
+
+function showRules() {
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
-});
+}
 
 const closeModal = function () {
     modal.classList.add('hidden');
